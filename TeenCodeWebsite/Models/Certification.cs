@@ -8,6 +8,7 @@ namespace TeenCodeWebsite.Models
 {
     public class Certification
     {
+        public int ID { get; set; }
         public string Name { get; set; }
         public string IMGURL { get; set; }
     }
