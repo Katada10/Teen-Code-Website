@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TeenCodeWebsite.Models;
+using System.Net;
+using System.Net.Mail;
 
 namespace TeenCodeWebsite.Controllers
 {
@@ -29,5 +31,7 @@ namespace TeenCodeWebsite.Controllers
         {
             return View();
         }
+
+        
     }
 }

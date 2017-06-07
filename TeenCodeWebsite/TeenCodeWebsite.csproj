@@ -168,9 +168,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\CertController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\SocialController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -178,11 +178,15 @@
     <Compile Include="Migrations\201705281310481_Initial.Designer.cs">
       <DependentUpon>201705281310481_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705291039139_SmLinks.cs" />
+    <Compile Include="Migrations\201705291039139_SmLinks.Designer.cs">
+      <DependentUpon>201705291039139_SmLinks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\Certification.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\SMLink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -242,10 +246,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\Work.cshtml" />
-    <Content Include="Views\Cert\Index.cshtml" />
+    <Content Include="Views\Social\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Search\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -258,6 +263,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705281310481_Initial.resx">
       <DependentUpon>201705281310481_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705291039139_SmLinks.resx">
+      <DependentUpon>201705291039139_SmLinks.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

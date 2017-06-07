@@ -7,28 +7,28 @@ using TeenCodeWebsite.Models;
 
 namespace TeenCodeWebsite.Controllers
 {
-    public class CertController : Controller
+    public class SocialController : Controller
     {
+
         private ApplicationDbContext ctx = new ApplicationDbContext();
 
-        [Authorize(Roles = "Admin")]
+
+        [Authorize(Roles ="Admin")]
         public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddCertification(Certification c)
+        public ActionResult AddLink(SMLink sm)
         {
-            if (ModelState.IsValid)
+            if(ModelState.IsValid)
             {
-                ctx.Certifications.Add(new Certification { Name = c.Name, IMGURL = c.IMGURL });
+                ctx.SMLinks.Add(new SMLink() { Name = sm.Name, ImageUrl = sm.ImageUrl, PageUrl = sm.PageUrl });
                 ctx.SaveChanges();
                 return RedirectToAction("Index");
             }
-
-            Console.WriteLine("Failed to add cert");
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }

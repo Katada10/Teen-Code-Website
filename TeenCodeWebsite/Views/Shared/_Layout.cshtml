@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,13 +13,9 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("TeenCode", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("TeenCode", "Index", "Home", new { area = "" }, new { @class = "navbar-brand", @style = "font-family: Lucida Sans Unicode, Lucida Grande, sans-serif; padding-right: 200px;" })
             </div>
+
             <div class="navbar-collapse collapse pull-right">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
@@ -34,7 +31,25 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - TeenCode</p>
+            <div class="col-sm-6">
+
+                <h3 style="font-family: Lucida Sans Unicode, Lucida Grande, sans-serif">TeenCode</h3>
+
+                <p class="footer-links">
+                    @Html.ActionLink("Home", "Index", "Home") .
+                    @Html.ActionLink("Work", "Work", "Home") .
+                    @Html.ActionLink("About", "About", "Home") .
+                   @Html.ActionLink("Contact", "Contact", "Home") 
+                </p>
+
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 pull-right">
+                    <p>&copy; @DateTime.Now.Year - TeenCode</p>
+            
+                </div>
+            </div>
         </footer>
     </div>
 

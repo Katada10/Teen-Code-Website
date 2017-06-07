@@ -21,7 +21,7 @@ namespace TeenCodeWebsite.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
-        public DbSet<Certification> Certifications { get; set; }
+        public DbSet<SMLink> SMLinks { get; set; }
 
 
         public ApplicationDbContext()
