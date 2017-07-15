@@ -46,14 +46,16 @@ namespace TeenCodeWebsite.Controllers
                     var smtp = new SmtpClient();
 
                     smtp.Host = ("gmail-smtp-in.l.google.com");
+                    
+
                     smtp.Port = 25;
                     smtp.EnableSsl = true;
 
                     smtp.UseDefaultCredentials = true;
 
                     smtp.Send(msg);
+
                     ModelState.Clear();
-                    
                 }
                 catch(Exception ex)
                 {
