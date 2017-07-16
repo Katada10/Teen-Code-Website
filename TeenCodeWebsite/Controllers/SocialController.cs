@@ -19,7 +19,7 @@ namespace TeenCodeWebsite.Controllers
             return View();
         }
 
-        [HttpPost]
+        [HttpPost, Authorize(Roles ="Admin")]
         public ActionResult AddLink(SMLink sm)
         {
             if(ModelState.IsValid)
