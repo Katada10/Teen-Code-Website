@@ -8,16 +8,16 @@ namespace TeenCodeWebsite.Models
 {
     public class ContactForm
     {
-        [Required]
+        [Required(ErrorMessage ="Name is required")]
         public string Name { get; set; }
 
-        [Required, EmailAddress]
+        [Required(ErrorMessage ="Email is required"), EmailAddress]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Subject is required")]
         public string Subject { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please Enter A Message")]
         public string Message { get; set; }
     }
 }

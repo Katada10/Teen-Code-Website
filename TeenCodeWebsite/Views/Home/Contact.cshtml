@@ -6,32 +6,80 @@
 <h1 class="text-center text-info">
     We Would Love to Hear From You!
 </h1>
-@using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class="col-sm-12 col-sm-offset-4"}))
-{
-    @Html.AntiForgeryToken()
-    
 
+<form action="http://localhost:80/redirect/script.php" method="post" class="col-sm-12 col-sm-offset-4" id="myForm" name="myForm" onsubmit="return validate()">
+    @Html.AntiForgeryToken()
+
+
+    @{ 
+        
+    }
     <div class="form-group">
         @Html.LabelFor(m => m.Name)
-        @Html.TextBoxFor(m => m.Name, new { @class = "form-control"})
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @name="Name"})
+        @Html.ValidationMessage("Name")
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.Email)
-        @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @name="Email" })
+        @Html.ValidationMessage("Email")
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.Subject)
-        @Html.TextBoxFor(m => m.Subject, new { @class = "form-control" })
+        @Html.TextBoxFor(m => m.Subject, new { @class = "form-control", @name="Subject" })
+        @Html.ValidationMessage("Subject")
     </div>
 
     <div class="form-group">
         @Html.LabelFor(m => m.Message)
-        @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @cols = 40, @rows =10 })
+        @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @cols = 40, @rows =10, @name="Message" })
+        @Html.ValidationMessage("Message")
     </div>
 
     <button class="btn btn-primary" type="submit">
         Send Message
     </button>
-}
+
+    <script>
+
+        function validate()
+        {
+            var name = document.forms["myForm"]["Name"].value;
+            if (name == "") {
+                alert("Name must be filled out");
+                back();
+                return false;
+            }
+
+            var email = document.forms["myForm"]["Email"].value;
+            if (email == "") {
+                alert("Email must be filled out");
+                back();
+                return false;
+            }
+
+            var sbj = document.forms["myForm"]["Subject"].value;
+            if (sbj == "") {
+                alert("Subject must be filled out");
+                back();
+                return false;
+            }
+
+            var msg = document.forms["myForm"]["Message"].value;
+            if (msg == "") {
+                alert("Message must be filled out");
+                back();
+                return false;
+            }
+
+            return true;
+        }
+
+        function back()
+        {
+            window.history.back();
+        }
+    </script>
+</form>
