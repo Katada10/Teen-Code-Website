@@ -11,7 +11,7 @@ namespace TeenCodeWebsite.Models
         [Required(ErrorMessage ="Name is required")]
         public string Name { get; set; }
 
-        [Required(ErrorMessage ="Email is required"), EmailAddress]
+        [Required(ErrorMessage ="Email is required"), EmailAddress, DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required(ErrorMessage ="Subject is required")]

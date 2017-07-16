@@ -1,0 +1,8 @@
+-PHP script error handling page redirect
+-Website error page fixing
+-Removing access from signup urls
+-Removing access from admin urls
+-Fix security(ssl, cookies, SQL injection, xss, url info, etc..)
+-Clean Up
+-Final Check
+-Beta Testing
