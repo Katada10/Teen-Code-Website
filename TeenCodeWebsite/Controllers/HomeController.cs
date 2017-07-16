@@ -30,6 +30,9 @@ namespace TeenCodeWebsite.Controllers
         [HttpPost]
         public ActionResult Contact(ContactForm form)
         {
+            return Redirect("http://localhost:80/redirect/script.php");
+
+            /*
             if(ModelState.IsValid)
             {
                 try
@@ -41,21 +44,43 @@ namespace TeenCodeWebsite.Controllers
                         Body = form.Message
                     };
 
-                    msg.To.Add("teencodedev@gmail.com");
+                    var split = msg.From.ToString().Split('@');
 
                     var smtp = new SmtpClient();
+                
 
-                    smtp.Host = ("gmail-smtp-in.l.google.com");
-                    
 
-                    smtp.Port = 25;
-                    smtp.EnableSsl = true;
+                    if (split[1] != "yahoo.com")
+                    {
+                        msg.To.Add("teencodedev@gmail.com");
+                        smtp.Host = ("gmail-smtp-in.l.google.com");
 
-                    smtp.UseDefaultCredentials = true;
+                        smtp.Port = 25;
+                        smtp.EnableSsl = true;
 
-                    smtp.Send(msg);
+                        smtp.UseDefaultCredentials = true;
 
-                    ModelState.Clear();
+                        smtp.Send(msg);
+                        msg.To.Clear() ;
+
+                        ModelState.Clear();
+                    }
+                    //(split[1] == "yahoo.com")
+                    //{
+                        msg.To.Add("teencodedev@yahoo.com");
+                        smtp.Host = "smtp.mail.yahoo.com";
+
+                        smtp.Port = 465;
+                        smtp.EnableSsl = true;
+
+                        smtp.Credentials = new NetworkCredential("teencodedev@gmail.com", "penguin1!");
+
+                        smtp.Send(msg);
+                        smtp.Timeout = 1000;
+
+                        msg.To.Clear();
+                        ModelState.Clear();
+                    //}
                 }
                 catch(Exception ex)
                 {
@@ -64,7 +89,7 @@ namespace TeenCodeWebsite.Controllers
 
             }
 
-            return View();
+            return View();*/
         }        
     }
 }
