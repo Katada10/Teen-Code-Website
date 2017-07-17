@@ -8,8 +8,8 @@
     <meta name="author" content="Katada Freije" />
     <meta name="robots" content="nofollow,noarchive" />
 
-    <link rel="icon" href="~/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="https://goo.gl/SU5auy" type="image/x-icon" />
+    <link rel="shortcut icon" href="https://goo.gl/SU5auy" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
@@ -51,7 +51,9 @@
                 <p class="text-center">
                     @Html.ActionLink("Home", "Index", "Home") .
                     @Html.ActionLink("About", "About", "Home") . 
-                   @Html.ActionLink("Contact", "Contact", "Home")  
+                   @Html.ActionLink("Contact", "Contact", "Home") <br />
+                   @Html.ActionLink("Privacy Policy", "Privacy", "Home")
+                    .@Html.ActionLink("Terms and Conditions", "TOS", "Home")
                 </p>
 
             </div>
