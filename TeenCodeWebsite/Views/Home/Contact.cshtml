@@ -1,6 +1,6 @@
 ﻿@model TeenCodeWebsite.Models.ContactForm
 @{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "Contact - TeenCode";
 }
 
 <h1 class="text-center text-info col-sm-12">
@@ -9,7 +9,6 @@
 
 <form action="http://localhost:80/redirect/script.php" method="post" class="col-sm-12 col-sm-offset-4" id="myForm" name="myForm" onsubmit="return validate()">
 
-    @Html.AntiForgeryToken()
     <div class="form-group">
         @Html.LabelFor(m => m.Name) <span class="text-danger">*</span>
         @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @name="Name"})
@@ -38,12 +37,13 @@
         *Required
     </p>
 
-    <button class="btn btn-primary" type="submit">
+    <button class="btn btn-primary" type="submit" onsubmit="sented()">
         Send Message
     </button>
 
+    <p id="thanks"></p>
     <script>
-
+        var sent = false;
         function validate()
         {
             var name = document.forms["myForm"]["Name"].value;
@@ -68,7 +68,13 @@
                 return false;
             }
             else {
-              return true;
+                alert("Message Sent");
+                sent = true;
+            }
+
+            if(sent === true)
+            {
+                return true;
             }
         }
 
