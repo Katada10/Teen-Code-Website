@@ -51,20 +51,31 @@
             var sbj = document.forms["myForm"]["Subject"].value;
             var msg = document.forms["myForm"]["Message"].value;
 
+            var fail = document.forms["myForm"]["Email"].value.indexOf('@@');
+
             if (name == "") {
-                document.getElementById("e1").innerHTML = "Name must be filled out";
+                alert("Fill out highlited fields");
+                document.getElementById("e1").innerHTML = "<p class='text-danger'>Name must be filled out</p>";
                 return false;
             }
             else if (email == "") {
-                document.getElementById("e2").innerHTML = "Email must be filled out";
+                alert("Fill out highlited fields");
+                document.getElementById("e2").innerHTML = "<p class='text-danger'>Email must be filled out</p>";
+                return false;
+            }
+            else if(fail <= -1)
+            {
+                document.getElementById("e2").innerHTML = "<p class='text-danger'>Please Enter Valid Email</p>";
                 return false;
             }
             else if (sbj == "") {
-                document.getElementById("e3").innerHTML = "Subject must be filled out";
+                alert("Fill out highlited fields");
+                document.getElementById("e3").innerHTML = "<p class='text-danger'>Subject must be filled out</p>";
                 return false;
             }
             else if (msg == "") {
-                document.getElementById("e4").innerHTML = "Message must be filled out";
+                alert("Fill out highlited fields");
+                document.getElementById("e4").innerHTML = "<p class='text-danger'>Message must be filled out</p>";
                 return false;
             }
             else {
