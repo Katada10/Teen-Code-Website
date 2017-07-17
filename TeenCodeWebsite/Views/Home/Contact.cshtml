@@ -8,9 +8,8 @@
 </h1>
 
 <form action="http://localhost:80/redirect/script.php" method="post" class="col-sm-12 col-sm-offset-4" id="myForm" name="myForm" onsubmit="return validate()">
+
     @Html.AntiForgeryToken()
-
-
     <div class="form-group">
         @Html.LabelFor(m => m.Name) <span class="text-danger">*</span>
         @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @name="Name"})
@@ -68,7 +67,7 @@
                 document.getElementById("e4").innerHTML = "Message must be filled out";
                 return false;
             }
-            else{
+            else {
               return true;
             }
         }

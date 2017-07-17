@@ -20,7 +20,7 @@ namespace TeenCodeWebsite.Controllers
         {
             return View();
         }
-
+        
         [ValidateAntiForgeryToken]
         public ActionResult Contact()
         {
