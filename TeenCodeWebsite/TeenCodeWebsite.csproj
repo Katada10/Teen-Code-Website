@@ -225,8 +225,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="PhpRef\class.phpmailer.php" />
+    <Content Include="PhpRef\class.phpmaileroauth.php" />
+    <Content Include="PhpRef\class.phpmaileroauthgoogle.php" />
+    <Content Include="PhpRef\class.pop3.php" />
+    <Content Include="PhpRef\class.smtp.php" />
+    <Content Include="PhpRef\get_oauth_token.php" />
+    <Content Include="PhpRef\PHPMailerAutoload.php" />
+    <Content Include="PhpRef\script.php" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="PhpRef\composer.json" />
+    <Content Include="PhpRef\composer.lock" />
+    <Content Include="PhpRef\LICENSE" />
+    <Content Include="PhpRef\VERSION" />
     <None Include="Properties\PublishProfiles\TeenCodeWeb - Web Deploy %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\TeenCodeWeb - Web Deploy %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\TeenCodeWeb - Web Deploy.pubxml" />
@@ -282,7 +294,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="PhpRef\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
