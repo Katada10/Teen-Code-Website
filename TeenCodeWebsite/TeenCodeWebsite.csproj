@@ -202,10 +202,6 @@
     <Compile Include="Migrations\201705281310481_Initial.Designer.cs">
       <DependentUpon>201705281310481_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201705291039139_SmLinks.cs" />
-    <Compile Include="Migrations\201705291039139_SmLinks.Designer.cs">
-      <DependentUpon>201705291039139_SmLinks.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ContactForm.cs" />
@@ -220,7 +216,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\facebook-logo.png" />
-    <Content Include="Content\linkedin-logo.svg" />
+    <Content Include="Content\linkedin-logo.png" />
     <Content Include="Content\twitter-logo.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -306,9 +302,6 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705281310481_Initial.resx">
       <DependentUpon>201705281310481_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201705291039139_SmLinks.resx">
-      <DependentUpon>201705291039139_SmLinks.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
