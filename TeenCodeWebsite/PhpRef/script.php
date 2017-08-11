@@ -8,7 +8,7 @@ function _prev($string)
 }
 
 
-
+$url = "http://tcspace.azurewebsites.net/Home/Sent";
 $email = $_POST["Email"];
 $name = $_POST["Name"];
 $to = "teencodedev@gmail.com";
@@ -25,7 +25,6 @@ $mail->Subject = $subject;
 $mail->msgHTML("Message From : ".$name."<br> Email: <br>".$email."<br> Subject: <br>".$subject."<br> Message: <br>".$message);
 
 
-$url = "http://teencodeweb.azurewebsites.net/Home/Contact";
 $errorUrl = "http://teencodeweb.azurewebsites.net/Shared/Error";
 
 
