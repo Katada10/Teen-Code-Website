@@ -25,13 +25,13 @@
 
 
 <div class="row text-center">
-    <a href="~/Views/Home/Index.cshtml" >
-        <input type="button" class="btn btn-success" value="Back to Home Page"/>
-    </a>
+    <button class="btn btn-primary">
+        @Html.ActionLink("Back to Home Page", "Index")
+    </button>
 
-    <a href="~/Views/Home/Contact.cshtml" >
-        <input type="button" class="btn btn-success" value="Back to Contact Page" />
-    </a>
+    <button class="btn btn-primary">
+        @Html.ActionLink("Back to Contact Page", "Contact")
+    </button>
 </div>
 
 
